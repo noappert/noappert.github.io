@@ -48,17 +48,11 @@
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        // Sélectionner tous les éléments avec la classe "element"
         var elements = document.querySelectorAll(".element");
-
-        // Parcourir chaque élément et attribuer une couleur aléatoire
         elements.forEach(function (element) {
-            // Générer des valeurs aléatoires pour les composantes RGB
             var red = Math.floor(Math.random() * 256);
             var green = Math.floor(Math.random() * 256);
             var blue = Math.floor(Math.random() * 256);
-
-            // Appliquer la couleur de fond aléatoire à l'élément
             element.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
         });
     });
