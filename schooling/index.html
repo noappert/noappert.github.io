@@ -16,10 +16,10 @@
 
 <body>
     <div class="nav">
-        <a href='../'" class=" homeHref">noappertBD</a>
-        <a href="../projects/">Projects</a>
-        <a href="../photos/">Photos</a>
-        <a class="selected" href="../schooling/">Schooling</a>
+        <a href='../' class=" homeHref">noappertBD</a>
+        <a href="#projects" onclick="changePage('../projects/')">Projects</a>
+        <a href="#photos" onclick="changePage('../photos/')">Photos</a>
+        <a class="selected" href="#schooling" onclick="changePage('../schooling/')">Schooling</a>
         <!-- right side -->
         <a class="button github right" href="https://github.com/noappertBD">GitHub</a>
         <a href="https://github.com/noappertBD">Contact</a>
@@ -46,17 +46,7 @@
         </div>
     </div>
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var elements = document.querySelectorAll(".element");
-        elements.forEach(function (element) {
-            var red = Math.floor(Math.random() * 256);
-            var green = Math.floor(Math.random() * 256);
-            var blue = Math.floor(Math.random() * 256);
-            element.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
-        });
-    });
-    //konosuba
+<script src="../assets/js/script.js">
 </script>
 
 </html>

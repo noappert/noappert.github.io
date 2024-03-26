@@ -87,6 +87,8 @@ div.element {
     position: absolute;
     filter: blur(300px);
     -webkit-filter: blur(300px);
+    transition: 1s ease-in-out;
+    background-color: transparent;
 }
 
 div.element.round {
@@ -226,9 +228,8 @@ div.global>div.home>div.summury>a.schooling::before {
 
 
 div.global>div.items {
-    margin: 96px min(96px);
-    margin-left: max(auto);
-    margin-right: max(auto);
+    margin: 96px auto;
+    padding: 0 96px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 12px;
@@ -284,7 +285,25 @@ div.global>div.items>div.pin.three>div.image {
 }
 
 footer {
-    height: calc(64px * 3);
+    height: calc(64px * 5);
     box-shadow: inset 0 1px 0 0 #444444;
     background-color: #202022;
+    display: grid;
+    grid-template-columns: 1fr 3fr 5fr 1fr;
+    grid-gap: 12px;
+}
+
+footer>.left {
+    grid-column: 2 / 3;
+    padding: 48px;
+}
+
+footer>.right {
+    grid-column: 3 / 4;
+    padding: 48px;
+}
+
+body>p.center {
+    text-align: center;
+    margin-top: 12px;
 }

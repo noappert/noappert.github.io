@@ -16,9 +16,9 @@
 <body>
     <div class="nav">
         <a href='/' class="homeHref">noappertBD</a>
-        <a href="/projects/">Projects</a>
-        <a href="/photos/">Photos</a>
-        <a href="/schooling/">Schooling</a>
+        <a href="#projects" onclick="changePage('/projects/')">Projects</a>
+        <a href="#photos" onclick="changePage('/photos/')">Photos</a>
+        <a href="#schooling" onclick="changePage('/schooling/')">Schooling</a>
         <!-- right side -->
         <a class="button github right" href="https://github.com/noappertBD">GitHub</a>
         <a href="https://github.com/noappertBD">Contact</a>
@@ -40,21 +40,22 @@
             </div>
         </div>
         <div class="items">
-            <div class="pin one">
+            <div class="pin one" onClick="opening('https://github.com/noappertBD/DirecteStAubin')">
                 <div class="image"></div>
                 <div class="description">
                     <h3 class="itemTitle">Directe St Aubin</h3>
                     <p>A simplified API in Python Flask that use the EcoleDirecte API.</p>
                 </div>
             </div>
-            <div class="pin two">
+            <div class="pin two"
+                onClick="opening('https://github.com/noappertBD/NSI-T_PY-CHAP-Fonctions-recursives_Projet-Hanoi')">
                 <div class="image"></div>
                 <div class="description">
                     <h3 class="itemTitle">The Hanoï Game</h3>
                     <p>I had to do a hanoï game with python and tkinter</p>
                 </div>
             </div>
-            <div class="pin three">
+            <div class="pin three" onClick="opening('https://github.com/noappertBD/ChromaLauncher')">
                 <div class="image"></div>
                 <div class="description">
                     <h3 class="itemTitle">Chroma Launcher</h3>
@@ -65,23 +66,23 @@
     </div>
     <footer>
         <div class="left">
-            
+            <h2>Nolan APPERT</h2>
+            <p>Angers, France</p>
+            <br>
+            <br>
+            <br>
+            <p>📞 +33 7 63 70 20 10</p>
+            <br>
+            <p>📩 no.appert@proton.me</p>
+            <br>
+            <p></p>
         </div>
         <div class="right">
-            
+            <p>Le site est toujours en dev 💟</p>
         </div>
     </footer>
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var elements = document.querySelectorAll(".element");
-        elements.forEach(function (element) {
-            var red = Math.floor(Math.random() * 256);
-            var green = Math.floor(Math.random() * 256);
-            var blue = Math.floor(Math.random() * 256);
-            element.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
-        });
-    });
+<script src="assets/js/script.js">
 </script>
 
 </html>
