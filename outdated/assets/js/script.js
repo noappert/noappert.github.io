@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
         var blue = Math.floor(Math.random() * 256);
         element.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
     });
-    var all = document.querySelectorAll("body");
-    all.forEach(function (element) {
-        element.innerHTML = "<p class='center'>Site en developpement 💟</p>"
-    });
+    // var all = document.querySelectorAll("body");
+    // all.forEach(function (element) {
+    //     element.innerHTML = "<p class='center'>Site en developpement 💟</p>"
+    // });
 });
 
 function opening (link) {
