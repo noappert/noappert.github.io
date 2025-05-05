@@ -25,8 +25,8 @@ div.nav {
     align-items: center;
     padding:  0 32px 0 32px;
     background-color: #2021247e;
-    backdrop-filter: saturate(150%) blur(10px);
-    -webkit-backdrop-filter: saturate(150%) blur(10px);
+    backdrop-filter: saturate(150%) blur(50px);
+    -webkit-backdrop-filter: saturate(150%) blur(50px);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -51,6 +51,7 @@ div.nav>a.selected {
 div.nav>a.homeHref {
     font-size: 18px;
     font-family: "Bakbak One", sans-serif;
+    width: 75px
 }
 
 div.nav>a.right {
@@ -139,7 +140,7 @@ div.global>div.home>div.wrap>div.img {
 }
 
 div.global>div.home>div.one {
-    margin: 0 0 0 -103px;
+    margin: 36px 0 0 -103px;
 }
 
 div.global>div.home>div.one>div.ione {
@@ -161,7 +162,7 @@ div.ir {
 }
 
 div.global>div.home>div.two {
-    margin: -115px 0 36px 178px;
+    margin: -115px 0 0px 178px;
 }
 
 div.global>div.home>div.two>div.itwo {
@@ -202,7 +203,6 @@ div.global>div.home>div.summury>a {
     padding: 0 36px 0 12px;
     border: 1px solid #444444;
     box-shadow: 0 0 30px #2021247e;
-    width: max-content;
 }
 
 div.global>div.home>div.summury>a:hover {
@@ -341,4 +341,77 @@ footer>.right {
 body>p.center {
     text-align: center;
     margin-top: 24px;
+}
+
+@media only screen and (max-width: 800px) {
+    div.nav {
+        padding: 0 16px;
+    }
+    div.nav>a {
+        display: none;
+    }
+    div.nav>a.homeHref {
+        display: block;
+    }
+    div.nav>a.github {
+        margin-right: -5px;
+    }
+    div.global>div.home>div.one {
+        margin: 27px 0 0 -77px;
+    }
+    div.global>div.home>div.one>div.ione {
+        background-position: 0 -75px;
+        height: 150px;
+        min-width: 225px;
+    }
+    div.global>div.home>div.two {
+        margin: -86px 0 0 133px;
+    }
+    div.global>div.home>div.two>div.itwo {
+        background-position: 0 -34px;
+        height: 112px;
+        min-width: 169px;
+    }
+    div.global>div.home>div.text>h1 {
+        font-size: 54px;
+    }
+    footer>.left {
+        grid-column: 2 / 3;
+        padding: 24px;
+    }
+    footer>.right {
+        grid-column: 3 / 4;
+        padding: 24px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    div.global>div.home>div.summury {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 12px;
+        flex-direction: row;
+        width: 400px;
+    }
+    footer>.left {
+        grid-column: 1 / 5;
+        padding: 16px;
+    }
+    
+    footer>.right {
+        grid-column: 1 / 5;
+        padding: 16px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    div.global>div.home>div.text>h1 {
+        font-size: 44px;
+    }
+    div.global>div.home>div.text>p {
+        font-size: 13px;
+    }
+    div.global>div.home>div.summury {
+        width: calc(100% - 40px);
+    }
 }
